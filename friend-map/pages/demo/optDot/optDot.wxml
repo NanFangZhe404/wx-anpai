@@ -1,0 +1,15 @@
+<view style="font-size: larger;font-weight: bold;">历史记录</view>
+<view wx:if="{{historyList.length==0}}">
+暂无记录（请进行添加地图选点）
+</view>
+
+<view wx:for="{{historyList}}" wx:key="item" wx:index="index">
+  <view style="color:rgb(13, 155, 20)">{{index + 1}}.</view>
+  <view>经度：<text style="color:red">{{item.longitude}}</text></view>
+  <view>纬度：<text style="color:rgb(177, 38, 170)">{{item.latitude}}</text></view>
+  <view>具体位置：<text style="color:rgb(0, 2, 128)">{{item.address}}{{item.name}}</text></view>
+</view>
+
+<view style="position: absolute;bottom: 40rpx; left: 0;right: 0;margin: auto;">
+  <button bindtap="getLocal">地图选点</button>
+</view>

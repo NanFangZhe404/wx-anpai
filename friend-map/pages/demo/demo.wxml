@@ -1,0 +1,3 @@
+<view wx:for="{{optTabList}}" wx:key="item" wx:index="index">
+    <button bindtap="optTap" data-url="{{item.path}}">{{item.txt}}</button>
+</view>

@@ -1,0 +1,20 @@
+<!-- 地图位置 -->
+<!-- <view class="main-body"> -->
+<view style="height: 100%;">
+  <map id="friendMap" style="width: 100%; height:100%;" bindmarkertap="bindMarker" scale="{{scale}}" subkey="{{subkey}}" markers="{{markerList}}" show-compass="true" show-scale="true" bindtap="bindCheckPoint" bindlabeltap="bindCheckPoint" bindpoitap="bindPoi" longitude="{{longitude}}" latitude="{{latitude}}" show-location />
+  <!-- 移动到当前位置 -->
+  <view class="local icon-position" bindtap="moveToLocation">
+    当前
+  </view>
+  <!-- 缩小、放大最大 -->
+  <view class="big-small-chenge icon-position active" bindtap="changeMaxSamll" wx:if="{{scale>=10}}">
+    最小
+  </view>
+  <view class="big-small-chenge icon-position active" bindtap="changeMaxBig" wx:if="{{scale<10}}">
+    最大
+  </view>
+  <!-- 是否能进行标点 -->
+  <view class="add-info icon-position {{isPoiActive?'active':''}}" bindtap="setPoi">
+    标记
+  </view>
+</view>

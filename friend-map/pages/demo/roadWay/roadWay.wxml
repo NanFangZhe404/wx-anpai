@@ -1,0 +1,28 @@
+<view style="text-align:center; display: flex;">
+    <button bindtap="optStartDot" data-id="startTxt">{{startTxt}}</button>
+    -
+    <button bindtap="optEndDot" data-id="endTxt">{{endTxt}}</button>
+</view>
+<view>
+    <radio-group bindchange="radioChange">
+        <view style="display: flex;text-align:center;">
+            <label style="display: flex;" wx:for="{{travelWayList}}" wx:key="{{item.value}}">
+                <radio value="{{item.value}}" checked="{{item.checked}}" />
+                <view>{{item.name}}</view>
+            </label>
+        </view>
+    </radio-group>
+</view>
+<view style="font-size: larger;font-weight: bold;">历史记录</view>
+<view wx:if="{{historyList.length==0}}">
+    暂无记录（请进行添加地图选点）
+</view>
+
+<view wx:for="{{historyList}}" wx:key="item" wx:index="index" bindtap="goRoadWayHistory" data-id="{{index}}" style="border: 1px solid #d7dad7;">
+    <view style="color:rgb(13, 155, 20)">路线{{index + 1}}.（交通方式：{{item.optTravelWayName}}）</view>
+    <view>起点：<text style="color:green">{{item.startPoint.name}}（经度：{{item.startPoint.longitude}}，维度：{{item.startPoint.latitude}}）</text></view>
+    <view>终点：<text style="color:red">{{item.endPoint.name}}（经度：{{item.endPoint.longitude}}，维度：{{item.endPoint.latitude}}）</text></view>
+</view>
+<view style="position: absolute;bottom: 40rpx; left: 0;right: 0;margin: auto;">
+    <button bindtap="goRoadWay">路线规划</button>
+</view>

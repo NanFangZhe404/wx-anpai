@@ -1,0 +1,143 @@
+/* pages/home/home.wxss */
+page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-position {
+  width: 70rpx;
+  height: 70rpx;
+  overflow: hidden;
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8rpx;
+  z-index: 100;
+  font-size: 24rpx;
+}
+
+.main-body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.cover-smaller {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  /* top: 20rpx; */
+  bottom: 0px;
+
+  right: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-set {
+  width: 70rpx;
+  height: 70rpx;
+  /* background: white; */
+  border-radius: 10%;
+}
+
+.local {
+  color: #0048ff;
+  bottom: 130rpx;
+  right: 20rpx;
+}
+
+.big-small-chenge {
+  bottom: 50rpx;
+  right: 20rpx;
+}
+
+.add-change {
+  bottom: 210rpx;
+  right: 20rpx;
+}
+
+.add-info {
+  bottom: 50rpx;
+  left: 20rpx;
+}
+
+.cut-change {
+  bottom: 290rpx;
+  right: 20rpx;
+}
+
+
+.icon-position image {
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: bottom;
+}
+
+.class-text {
+  font-size: 30rpx;
+  color: #2c3c65;
+}
+
+.album {
+  display: flex;
+  /* width: 100%; */
+  flex-direction: row;
+  background-color: white;
+  padding: 40rpx;
+  margin: 0rpx 20rpx;
+  font-family: -webkit-body;
+}
+
+.the-avatar {
+  background: #fff;
+}
+
+
+.phone {
+  color: #2c3c65;
+  font-weight: 450;
+  font-size: 28rpx;
+  display: flex;
+  line-height: 60rpx;
+}
+
+.content {
+  /* margin-top: 20rpx; */
+  /* margin-right: 10rpx; */
+  color: black;
+  font-weight: 445;
+  /* margin-bottom: 15rpx; */
+  font-size: 28rpx;
+}
+
+.content-title {
+  margin-top: 20rpx;
+  margin-right: 10rpx;
+  color: black;
+  font-size: medium;
+  font-weight: bold;
+  margin-bottom: 15rpx;
+}
+
+.line {
+  height: 1px;
+  border-top: solid Silver 1px;
+  margin-bottom: 40rpx;
+  margin-top: 30rpx;
+}
+
+.search {
+  border: 1px #2c3c65 solid;
+  border-radius: 100rpx;
+}
+
+.active {
+  color: red;
+}
